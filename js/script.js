@@ -9,10 +9,16 @@ chevronRight.click(function(){
     console.log(activeElement);
     activeElement.removeClass('active');
 
-    //individuo con .next elemento successivo e gli aggiungo class active per mostrare elemento 
-    var nextElement = activeElement.next();
-    //console.log(nextElement);
-    nextElement.addClass('active');
+    if(activeElement.hasClass('last')){
+        //aggiungo la classe all' elemento con classe first
+        $('.first').addClass('active');
+    }else{
+        //altrimenti individuo con .next elemento successivo e gli aggiungo class active per mostrare elemento 
+        var nextElement = activeElement.next();
+        //console.log(nextElement);
+        nextElement.addClass('active');
+
+    }
 
 });
 
@@ -28,11 +34,16 @@ chevronLeft.click(function(){
     activeElement.removeClass('active');
     console.log(activeElement);
 
-    //individuo con .prev elemento precedente e gli aggiungo class active per mostrare elemento 
-    var prevElement = activeElement.prev();
-    console.log(prevElement);
-    prevElement.addClass('active');
-    
+    if(activeElement.hasClass('first')){
+        //aggiungo la classe all' elemento con classe last
+        $('.last').addClass('active');
+    }else{
+        //individuo con .prev elemento precedente e gli aggiungo class active per mostrare elemento 
+        var prevElement = activeElement.prev();
+        console.log(prevElement);
+        prevElement.addClass('active');
+    }
+
 
 });
 
