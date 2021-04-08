@@ -1,0 +1,36 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.container{
+    
+    width: 1000px;
+    margin: auto;
+}
+
+.slider{
+    display: flex;
+    align-items: center;
+}
+
+.chevron{
+    font-size: 30px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.images img{
+    display: none;
+}
+
+.images img.active{
+    display: block;
+}
